@@ -1,14 +1,14 @@
-import '../widgets/category_chip.dart';
-import '../widgets/flash_card.dart';
-
-import '../../core/models/product_model.dart';
 import 'package:flutter/material.dart';
+
 import '../../core/models/category_model.dart';
-import '../widgets/discount_banner.dart';
-import '../widgets/home_header.dart';
-import '../widgets/recent_card.dart';
-import '../widgets/product_section.dart';
+import '../../core/models/product_model.dart';
 import '../../utils/size_config.dart';
+import '../widgets/category_chip.dart';
+import '../widgets/discount_banner.dart';
+import '../widgets/flash_card.dart';
+import '../widgets/home_header.dart';
+import '../widgets/product_section.dart';
+import '../widgets/recent_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

@@ -15,32 +15,32 @@ class ColorDots extends StatelessWidget {
   Widget build(BuildContext context) {
     // Now this is fixed and only for demo
     const int selectedColor = 0;
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeConfig.width(20)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Colors',
-            style: TextStyle(
-                color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Colors',
+          style: TextStyle(
+            color: AppColors.kTextColor,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
           ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              ...List.generate(
-                product.colors.length,
-                (index) => ColorDot(
-                  color: product.colors[index],
-                  isSelected: index == selectedColor,
-                ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          children: [
+            ...List.generate(
+              product.colors.length,
+              (index) => ColorDot(
+                color: product.colors[index],
+                isSelected: index == selectedColor,
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
@@ -92,35 +92,32 @@ class SizeDots extends StatelessWidget {
   Widget build(BuildContext context) {
     // Now this is fixed and only for demo
     const int selectedColor = 0;
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: SizeConfig.width(20)),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Available Sizes',
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
-            ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Available Sizes',
+          style: TextStyle(
+            color: AppColors.kTextColor,
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
           ),
-          SizedBox(
-            height: 5,
-          ),
-          Row(
-            children: [
-              ...List.generate(
-                product.sizes.length,
-                (index) => SizeDot(
-                  size: product.sizes[index],
-                  isSelected: index == selectedColor,
-                ),
+        ),
+        SizedBox(
+          height: 5,
+        ),
+        Row(
+          children: [
+            ...List.generate(
+              product.sizes.length,
+              (index) => SizeDot(
+                size: product.sizes[index],
+                isSelected: index == selectedColor,
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
@@ -157,7 +154,8 @@ class SizeDot extends StatelessWidget {
           child: Text(
             '$size',
             style: Theme.of(context).textTheme.caption!.copyWith(
-                  color: isSelected ? Colors.white : Colors.black,
+                  color: isSelected ? Colors.white : AppColors.kTextColor,
+                  fontWeight: FontWeight.bold,
                 ),
           ),
         ),

@@ -6,7 +6,7 @@ import 'locator.dart';
 import 'ui/app_home.dart';
 import 'utils/themes.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setupLocator();
   runApp(const MyApp());
