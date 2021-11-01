@@ -8,8 +8,8 @@ import '../../utils/size_config.dart';
 
 import '../../locator.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard({
+class RecentCard extends StatelessWidget {
+  const RecentCard({
     Key? key,
     this.width = 140,
     this.aspectRetio = 1.02,

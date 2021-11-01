@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../core/models/category_model.dart';
 import '../widgets/discount_banner.dart';
 import '../widgets/home_header.dart';
-import '../widgets/product_card.dart';
+import '../widgets/recent_card.dart';
 import '../widgets/product_section.dart';
 import '../../utils/size_config.dart';
 
@@ -52,7 +52,7 @@ class HomeScreen extends StatelessWidget {
                   ...List.generate(
                     demoProducts.length,
                     (index) {
-                      if (demoProducts[index].isPopular)
+                      if (demoProducts[index].isFlash)
                         return FlashCard(product: demoProducts[index]);
 
                       return SizedBox.shrink();
@@ -62,14 +62,14 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(height: SizeConfig.width(30)),
               ProductSection(
-                title: 'Popular Products',
+                title: 'Recently Viewed',
                 hasCountdown: false,
                 children: [
                   ...List.generate(
                     demoProducts.length,
                     (index) {
                       if (demoProducts[index].isPopular)
-                        return ProductCard(product: demoProducts[index]);
+                        return RecentCard(product: demoProducts[index]);
 
                       return SizedBox.shrink();
                     },
