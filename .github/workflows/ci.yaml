@@ -1,6 +1,8 @@
 name: CI
 
 on:
+  push: # calls action on pull request
+    branches: [ master ]
   pull_request: # calls action on pull request
     branches: [ master ] # calls action on master branch
 
